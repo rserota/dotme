@@ -24,7 +24,7 @@ var sessionMiddleware = sessionsModule({
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static('./public'))
-app.use(sessionMiddleware)
+// app.use(sessionMiddleware)
 
 app.use(require('./routes/mainRoutes'))
 
