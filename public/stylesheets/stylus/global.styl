@@ -1,5 +1,5 @@
 mainBlue = rgb(21,126,221)
-altBlue  = rgb(11,86,201)
+altBlue  = rgb(15, 95, 138)
 
 [v-cloak]
     display:none
@@ -20,3 +20,42 @@ body
 .me-tagline
     font-size 14px
     font-weight lighter
+
+a.navbar-brand .fa-code
+    transition transform .5s cubic-bezier(0.18, 0.89, 0.32, 1.28)
+
+a.navbar-brand .fa-circle-o
+    transition color .5s ease-in
+
+a.navbar-brand:hover .fa-code
+    transform rotateZ(180deg)
+
+a.navbar-brand:hover .fa-circle-o
+    color altBlue
+
+li.active
+    border-bottom 2px solid ghostwhite
+
+li.me-link
+    transition border .5s
+    position relative
+
+li.me-link:before
+    content ""
+    position absolute
+    background rgba(0,0,0,0)
+    transition all .3s
+    bottom 0
+    left 50%
+    right 50%
+    height 2px
+
+li.me-link:hover:before
+    content ""
+    position absolute
+    background altBlue
+    left 0
+    right 0
+    height 2px
+
+
