@@ -1,3 +1,20 @@
 [v-cloak] {
   display: none;
 }
+body {
+  background-color: #f8f8ff;
+}
+#the-navbar {
+  background-color: #157edd;
+}
+.navbar > .container {
+  display: block;
+}
+.me-name {
+  font-size: 18px;
+  font-weight: bolder;
+}
+.me-tagline {
+  font-size: 14px;
+  font-weight: lighter;
+}
