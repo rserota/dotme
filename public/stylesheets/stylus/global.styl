@@ -33,12 +33,20 @@ a.navbar-brand:hover .fa-code
 a.navbar-brand:hover .fa-circle-o
     color altBlue
 
-li.active
-    border-bottom 2px solid ghostwhite
-
 li.me-link
     transition border .5s
     position relative
+
+li.me-link.active:before
+    content ""
+    position absolute
+    background ghostwhite
+    bottom 0
+    height 2px
+    left 0
+    right 0
+    
+
 
 li.me-link:before
     content ""
@@ -58,4 +66,11 @@ li.me-link:hover:before
     right 0
     height 2px
 
-
+.sub-navbar
+    background-color mainBlue
+    color ghostwhite
+    
+.me-headshot
+    border-radius 999px
+    border 3px solid #222
+    transform rotateZ(6deg)

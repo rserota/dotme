@@ -18,4 +18,10 @@ router.get('/portfolio', function(req, res) {
     })
 })
 
+router.get('/hire-me', function(req, res) {
+    res.render('hire-me', {
+        page: 'hire-me'
+    })
+})
+
 module.exports = router
