@@ -7,6 +7,9 @@ body {
 #the-navbar {
   background-color: #157edd;
 }
+#the-footer {
+  background-color: #141414;
+}
 .navbar > .container {
   display: block;
 }
@@ -21,14 +24,14 @@ body {
 a.navbar-brand .fa-code {
   transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
-a.navbar-brand .fa-circle-o {
+a.navbar-brand .fa-circle {
   transition: color 0.5s ease-in;
 }
 a.navbar-brand:hover .fa-code {
   transform: rotateZ(180deg);
 }
-a.navbar-brand:hover .fa-circle-o {
-  color: #0f5f8a;
+a.navbar-brand:hover .fa-circle {
+  color: #1969a8;
 }
 li.me-link {
   transition: border 0.5s;
@@ -56,7 +59,7 @@ li.me-link:before {
 li.me-link:hover:before {
   content: "";
   position: absolute;
-  background: #0f5f8a;
+  background: #1969a8;
   left: 0;
   right: 0;
   height: 2px;
@@ -69,4 +72,16 @@ li.me-link:hover:before {
   border-radius: 999px;
   border: 3px solid #222;
   transform: rotateZ(6deg);
+}
+.at-least-full-page {
+  min-height: 90vh;
+}
+.social-icon {
+  display: inline-block;
+  color: #888;
+  transition: all 0.3s;
+}
+.social-icon:hover {
+  color: #f8f8ff;
+  transition: all 0.6s;
 }

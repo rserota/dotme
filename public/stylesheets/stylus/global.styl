@@ -1,5 +1,6 @@
 mainBlue = rgb(21,126,221)
-altBlue  = rgb(15, 95, 138)
+altBlue  = rgb(25, 105, 168)
+darkBack = rgb(20,20,20)
 
 [v-cloak]
     display:none
@@ -9,6 +10,9 @@ body
 
 #the-navbar
     background-color mainBlue
+
+#the-footer
+    background-color darkBack
 
 .navbar > .container
     display block
@@ -24,13 +28,13 @@ body
 a.navbar-brand .fa-code
     transition transform .5s cubic-bezier(0.18, 0.89, 0.32, 1.28)
 
-a.navbar-brand .fa-circle-o
+a.navbar-brand .fa-circle
     transition color .5s ease-in
 
 a.navbar-brand:hover .fa-code
     transform rotateZ(180deg)
 
-a.navbar-brand:hover .fa-circle-o
+a.navbar-brand:hover .fa-circle
     color altBlue
 
 li.me-link
@@ -74,3 +78,15 @@ li.me-link:hover:before
     border-radius 999px
     border 3px solid #222
     transform rotateZ(6deg)
+    
+.at-least-full-page
+    min-height 90vh
+    
+.social-icon
+    display inline-block
+    color #888
+    transition all .3s
+
+.social-icon:hover
+    color ghostwhite
+    transition all .6s
