@@ -1,12 +1,23 @@
 mainBlue = rgb(21,126,221)
 altBlue  = rgb(25, 105, 168)
 darkBack = rgb(20,20,20)
+altBack  = rgb(140,155,155)
 
 [v-cloak]
     display:none
 
 body
     background-color ghostwhite
+
+.altBack
+    background-color altBack
+
+.altBlue
+    background-color altBlue
+    
+.mainBlue
+    background-color mainBlue
+    color ghostwhite
 
 #the-navbar
     background-color mainBlue
@@ -78,6 +89,7 @@ li.me-link:hover:before
     border-radius 999px
     border 3px solid #222
     transform rotateZ(6deg)
+    float left
     
 .at-least-full-page
     min-height 90vh
