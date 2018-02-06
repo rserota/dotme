@@ -2,7 +2,10 @@ var express        = require('express')
 var bodyParser     = require('body-parser')
 var path           = require('path')
 var sessionsModule = require('client-sessions')
-var db             = require('./models/db')
+var HTTP           = require('http')
+var HTTPS          = require('https')
+var fs             = require('fs')
+// var db             = require('./models/db')
 
 var app = express()
 app.set('view engine', 'pug')
@@ -28,9 +31,25 @@ app.use(express.static('./public'))
 
 app.use(require('./routes/mainRoutes'))
 
+try {
+    var httpsConfig = {
+        key: fs.readFileSync('/etc/letsencrypt/live/raphaelserota.me/privkey.pem'),
+        cert: fs.readFileSync('/etc/letsencrypt/live/raphaelserota.me/cert.pem'),
+    }
 
+    var httpsServer = HTTPS.createServer(httpsConfig, app)
+    // 443 is the default port for HTTPS traffic
+    httpsServer.listen(443)
+    var httpApp = express()
+    httpApp.use(function(req, res, next){
+        res.redirect('https://thepasswordisdragons.com' + req.url)
+    })
+    httpApp.listen(80)
+}
+catch(e){
+    console.log(e)
+    console.log('could not start HTTPS server')
+    var httpServer = HTTP.createServer(app)
+    httpServer.listen(80)
+}
 
-var port = process.env.PORT || 80
-app.listen(port, function(err){
-    if ( err ) { console.log(err) }
-})

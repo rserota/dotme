@@ -99,4 +99,5 @@ li.me-link:hover:before {
 .portfolio-screenshot {
   max-height: 80vh;
   max-width: 100%;
+  border: 2px solid #141414;
 }
