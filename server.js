@@ -42,7 +42,7 @@ try {
     httpsServer.listen(443)
     var httpApp = express()
     httpApp.use(function(req, res, next){
-        res.redirect('https://thepasswordisdragons.com' + req.url)
+        res.redirect('https://raphaelserota.me' + req.url)
     })
     httpApp.listen(80)
 }
