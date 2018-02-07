@@ -20,6 +20,9 @@ body {
 #the-footer {
   background-color: #141414;
 }
+.navbar a {
+  color: #f8f8ff;
+}
 .navbar > .container {
   display: block;
 }
